@@ -1,0 +1,100 @@
+{
+  "name": "application-name",
+  "version": "1.0.0",
+  "description": "Application description.",
+  "scripts": {
+    "start": "meteor --settings settings-development.json",
+    "test": "meteor test --driver-package practicalmeteor:mocha --port 5000",
+    "chimp-watch": "chimp --ddp=http://localhost:3000 --watch --mocha --path=tests",
+    "chimp-test": "chimp --ddp=http://localhost:3000 --mocha --path=tests",
+    "staging": "meteor deploy staging.meteor.com --settings settings-development.json",
+    "production": "meteor deploy production.meteor.com --settings settings-production.json"
+  },
+  "devDependencies": {
+    "chimp": "^0.41.2",
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-meteor": "^4.0.1",
+    "eslint-plugin-react": "^6.4.1"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "plugins": [
+      "meteor",
+      "react"
+    ],
+    "extends": [
+      "airbnb/base",
+      "plugin:meteor/guide",
+      "plugin:react/recommended"
+    ],
+    "env": {
+      "browser": true
+    },
+    "globals": {
+      "server": false,
+      "browser": false,
+      "expect": false
+    },
+    "rules": {
+      "import/no-unresolved": 0,
+      "import/no-extraneous-dependencies": 0,
+      "import/extensions": 0,
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allow": [
+            "_id",
+            "_ensureIndex",
+            "_verifyEmailToken",
+            "_resetPasswordToken",
+            "_name"
+          ]
+        }
+      ],
+      "class-methods-use-this": 0
+    }
+  },
+  "dependencies": {
+    "babel-runtime": "^6.18.0",
+    "bcrypt": "^0.8.7",
+    "bootstrap": "^3.3.7",
+    "bootstrap-material-design": "^4.0.0-beta.4",
+    "fb": "^2.0.0",
+    "fb-react-sdk": "^1.0.4",
+    "fbgraph": "^1.4.1",
+    "jquery": "^2.2.4",
+    "jquery-validation": "^1.15.1",
+    "material-datetime-picker": "^2.4.0",
+    "meteor-node-stubs": "^0.3.2",
+    "rc-time-picker": "^3.2.1",
+    "react": "^15.6.2",
+    "react-addons-create-fragment": "^15.6.2",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-addons-linked-state-mixin": "^15.6.2",
+    "react-addons-perf": "^15.4.2",
+    "react-addons-pure-render-mixin": "^15.6.2",
+    "react-addons-test-utils": "^15.6.2",
+    "react-addons-transition-group": "^15.6.2",
+    "react-addons-update": "^15.6.2",
+    "react-big-calendar": "^0.17.0",
+    "react-bootstrap": "^0.30.5",
+    "react-datepicker": "^0.61.0",
+    "react-day-picker": "^7.0.5",
+    "react-dom": "^15.6.2",
+    "react-event-calendar": "^0.3.0",
+    "react-facebook-login": "^3.7.2",
+    "react-komposer": "^1.13.1",
+    "react-mdl": "^1.11.0",
+    "react-mdl-datepicker": "^1.0.0",
+    "react-router-bootstrap": "^0.23.1",
+    "react-router-dom": "^4.0.0",
+    "react-yearly-calendar": "^1.1.5"
+  }
+}

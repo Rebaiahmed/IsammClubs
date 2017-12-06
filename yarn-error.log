@@ -1,0 +1,121 @@
+Arguments: 
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js add react-day-picker
+
+PATH: 
+  /home/ahmed/.local/share/umake/bin:/home/ahmed/bin:/home/ahmed/.local/bin:/opt/maven/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/ahmed/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/local/go/bin:/home/ahmed/npm/bin:/home/ahmed/Android/Sdk/tools
+
+Yarn version: 
+  1.2.1
+
+Node version: 
+  8.6.0
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "application-name",
+    "version": "1.0.0",
+    "description": "Application description.",
+    "scripts": {
+      "start": "meteor --settings settings-development.json",
+      "test": "meteor test --driver-package practicalmeteor:mocha --port 5000",
+      "chimp-watch": "chimp --ddp=http://localhost:3000 --watch --mocha --path=tests",
+      "chimp-test": "chimp --ddp=http://localhost:3000 --mocha --path=tests",
+      "staging": "meteor deploy staging.meteor.com --settings settings-development.json",
+      "production": "meteor deploy production.meteor.com --settings settings-production.json"
+    },
+    "devDependencies": {
+      "chimp": "^0.41.2",
+      "eslint": "^3.8.1",
+      "eslint-config-airbnb": "^12.0.0",
+      "eslint-plugin-import": "^1.16.0",
+      "eslint-plugin-jsx-a11y": "^2.2.3",
+      "eslint-plugin-meteor": "^4.0.1",
+      "eslint-plugin-react": "^6.4.1"
+    },
+    "eslintConfig": {
+      "parserOptions": {
+        "ecmaFeatures": {
+          "jsx": true
+        }
+      },
+      "plugins": [
+        "meteor",
+        "react"
+      ],
+      "extends": [
+        "airbnb/base",
+        "plugin:meteor/guide",
+        "plugin:react/recommended"
+      ],
+      "env": {
+        "browser": true
+      },
+      "globals": {
+        "server": false,
+        "browser": false,
+        "expect": false
+      },
+      "rules": {
+        "import/no-unresolved": 0,
+        "import/no-extraneous-dependencies": 0,
+        "import/extensions": 0,
+        "no-underscore-dangle": [
+          "error",
+          {
+            "allow": [
+              "_id",
+              "_ensureIndex",
+              "_verifyEmailToken",
+              "_resetPasswordToken",
+              "_name"
+            ]
+          }
+        ],
+        "class-methods-use-this": 0
+      }
+    },
+    "dependencies": {
+      "babel-runtime": "^6.18.0",
+      "bcrypt": "^0.8.7",
+      "bootstrap": "^3.3.7",
+      "bootstrap-material-design": "^4.0.0-beta.4",
+      "fb": "^2.0.0",
+      "fb-react-sdk": "^1.0.4",
+      "fbgraph": "^1.4.1",
+      "jquery": "^2.2.4",
+      "jquery-validation": "^1.15.1",
+      "meteor-node-stubs": "^0.3.2",
+      "react": "^15.6.2",
+      "react-addons-pure-render-mixin": "^15.3.2",
+      "react-big-calendar": "^0.17.0",
+      "react-bootstrap": "^0.30.5",
+      "react-datepicker": "^0.61.0",
+      "react-dom": "^15.6.2",
+      "react-event-calendar": "^0.3.0",
+      "react-facebook-login": "^3.7.2",
+      "react-komposer": "^1.13.1",
+      "react-mdl": "^1.11.0",
+      "react-mdl-datepicker": "^1.0.0",
+      "react-router-bootstrap": "^0.23.1",
+      "react-router-dom": "^4.0.0",
+      "react-yearly-calendar": "^1.1.5"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  SyntaxError: /home/ahmed/.cache/yarn/v1/npm-type-detect-0.1.1-0ba5ec2a885640e470ea4e8505971900dac58822/.yarn-metadata.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:770:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:92:30)
+      at /usr/share/yarn/lib/cli.js:103:13
+      at <anonymous>
